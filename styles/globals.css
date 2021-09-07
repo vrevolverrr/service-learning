@@ -6,11 +6,58 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3ea0f3; 
+  border-radius: 25px;
+  transition: 0.1s ease-in;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5ab0fc; 
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
+p {
+  font-family: "MazzardH";
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "MazzardH";
+  src: url("/fonts/MazzardH-Bold.ttf");
+  font-style: bold;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MazzardH";
+  src: url("/fonts/MazzardH-SemiBold.ttf");
+  font-style: medium;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MazzardH";
+  src: url("/fonts/MazzardH-medium.ttf");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
 }
