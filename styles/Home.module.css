@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #B2F2FF;
+    overflow-x: hidden;
 }
 
 .hero {
