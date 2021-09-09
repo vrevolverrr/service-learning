@@ -5,34 +5,12 @@
     flex-direction: column;
     align-items: center;
     background-color: #B2F2FF;
-    overflow-x: hidden;
 }
 
 .hero {
     transform: translateY(16px);
-    /* width: 882px;
-    height: 634px; */
     position: absolute;
     bottom: 0px;
-    overflow: hidden;
-}
-
-@media only screen and (min-width: 0) {
-    .hero {
-        width: 550px;
-    }
-}
-
-@media only screen and (min-width: 1000px) {
-    .hero {
-        width: 882px;
-    }
-}
-
-.hero_image {
-    max-width: 882px;
-    max-height: 634px;
-    overflow: hidden;
 }
 
 .counter {
