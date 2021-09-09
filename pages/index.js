@@ -27,7 +27,7 @@ export default function Home({ uniqueUsers }) {
     <div>
       <main>
         <div className={styles.hero_container}>
-          <CountUp start={0} end={uniqueUsers} duration={1.5} delay={0} separator=",">
+          {/* <CountUp start={0} end={uniqueUsers} duration={1.5} delay={0} separator=",">
             {({ countUpRef, start }) => (
               <span className={styles.counter} ref={countUpRef} />
             )}
@@ -36,10 +36,8 @@ export default function Home({ uniqueUsers }) {
           <div className={styles.hero_text_container}>
             <TextTransition className={styles.hero_text} noWrap={true} direction="up" text={HERO_TEXT1[heroIndex % HERO_TEXT1.length]} springConfig={presets.default} />
             <TextTransition className={styles.hero_text} noWrap={true} direction="down" text={HERO_TEXT2[heroIndex % HERO_TEXT2.length]} springConfig={presets.default} />
-            </div>
-          <div className={styles.hero}>
-            <Image src={HeroBanner} alt="green planet"/> 
-          </div>
+            </div> */}
+          <div className={styles.hero} />
         </div>
         <div className={styles.infobox}>
         </div>

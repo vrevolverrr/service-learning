@@ -8,9 +8,15 @@
 }
 
 .hero {
-    transform: translateY(16px);
+    transform: translateY(12px);
     position: absolute;
     bottom: 0px;
+    width: 100%;
+    height: 634px;
+    background-image: url("../public/hero.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
 }
 
 .counter {
@@ -26,6 +32,7 @@
     font-weight: 300;
     color: #2F2F2F;
     flex-grow: 1;
+    font-family: "MazzardH";
 }
 
 .hero_text_container {
