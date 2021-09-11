@@ -13,52 +13,14 @@
     background-image: url("../public/hero.svg");
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: calc(12vw + 80vh);
     z-index: 1;
-}
-
-@media only screen and (min-width: 0) {
-    .hero {
-        background-size: 600px;
-    }
-    .hero_text_container {
-        top: 25%;
-    }
-    .hero_text {
-        font-size: 72px;
-    }
-}
-
-@media only screen and (min-width: 1000px) {
-    .hero {
-        background-size: 600px;
-    }
-    .hero_text_container {
-        top: 40%;
-    }
-    .hero_text {
-        font-size: 136px;
-    }
-}
-
-@media only screen and (min-width: 450px) {
-    .hero {
-        background-size: 700px;
-    }
-}
-
-@media only screen and (min-width: 1000px) {
-    .hero {
-        background-size: 900px;
-    }
-
-
 }
 
 .counter {
     font-family: 'MazzardH';
     font-style: normal;
-    font-size: 110px;
-    /*font-size: 8vw;*/
+    font-size: calc(4vw + 5vh);
     margin: 80px 0 10px 0;
     color: #2F2F2F;
 }
@@ -66,6 +28,7 @@
 .counter_text {
     margin: 10px;
     font-size: 32px;
+    font-size: calc(1vw + 2vh);
     font-family: "MazzardH";
     font-style: medium;
     color: #2F2F2F;
@@ -73,16 +36,16 @@
 }
 
 .hero_text_container {
-    position: absolute;
-    /* top: 40%; */
     width: 78%;
+    position: absolute;
+    top: 35vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .hero_text {
-    /* font-size: 136px; */
+    font-size: calc(4vw + 6vh);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: #2F2F2F;
     word-spacing: 60px;
