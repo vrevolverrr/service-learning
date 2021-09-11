@@ -1,9 +1,8 @@
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import CountUp from 'react-countup';
 import TextTransition, { presets } from "react-text-transition";
+import InfoBox from '../components/InfoBox';
 import styles from '../styles/Home.module.css';
-import HeroBanner from '../public/hero.svg';
 
 export default function Home({ uniqueUsers }) {
 
@@ -39,8 +38,15 @@ export default function Home({ uniqueUsers }) {
           </div>
           <div className={styles.hero} />
         </div>
-        <div className={styles.infobox}>
-        </div>
+        <InfoBox title="What is Carbon Footprint?" invert={false}>
+          Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
+        </InfoBox>
+        <InfoBox title="What is Carbon Footprint?" invert={true}>
+          Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
+        </InfoBox>
+        <InfoBox title="What is Carbon Footprint?" invert={true}>
+          Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
+        </InfoBox>
       </main>
     </div>
   );
@@ -53,7 +59,7 @@ export async function getStaticProps() {
    * 
    * @returns {object} - Props to be passed to page
    */
-  const res = await fetch("http://www.randomnumberapi.com/api/v1.0/random?min=1000&max=1000000&count=1")
+  const res = await fetch("http://www.randomnumberapi.com/api/v1.0/random?min=1000&max=1000000&count=1");
   const uniqueUsers = parseInt((await res.text()).replace('[', '').replace(']', ''));
 
   return {
@@ -61,5 +67,5 @@ export async function getStaticProps() {
       uniqueUsers,
     },
     revalidate: 10,
-  }
+  };
 }
