@@ -25,8 +25,8 @@
 
 .donate_box {
     width: 385px;
-    height: 380px;
-    padding: 20px;
+    height: 520px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,6 +53,7 @@
     margin: 15px 0 8px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 12px 6px;
 }
 
 .selection_item {
@@ -68,11 +69,20 @@
     font-size: 18px;
 }
 
+.active_selection_item {
+    background-color: #113259;
+    color: #ffffff;
+}
+
+.selection_item:hover {
+    cursor: pointer;
+}
+
 .custom_selection {
     width: 100%;
     height: 45px;
     padding: 20px;
-    margin-bottom: 15px;
+    margin: 5px 0 15px 0;
     display: flex;
     align-items: center;
     border: 1px solid #CDC8C8;
@@ -99,6 +109,7 @@
 .donate_button {
     width: 100%;
     height: 45px;
+    margin: 10px 0 20px 0;
     background-color: #DC582A;
     border-radius: 30px;
     border: none;
@@ -110,6 +121,14 @@
 
 .donate_button:hover {
     cursor: pointer;
+}
+
+.disclaimer {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: justify;
+    color: #474747;
 }
 
 @media only screen and (max-width: 500px) {
@@ -127,14 +146,21 @@
     }
 }
 
-@media only screen and (max-height: 700px) {
+
+@media only screen and (max-width: 350px) {
+    .title {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-height: 800px) {
     .main {
-        height: calc(100vh + 100px)
+        height: calc(100vh + 200px)
     }
 }
 
 @media only screen and (max-height: 600px) {
     .main {
-        height: calc(100vh + 250px)
+        height: calc(100vh + 400px)
     }
 }
