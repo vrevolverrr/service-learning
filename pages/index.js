@@ -47,6 +47,12 @@ export default function Home({ uniqueUsers }) {
         <InfoBox title="What is Carbon Footprint?" invert={true}>
           Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
         </InfoBox>
+        <InfoBox title="What is Carbon Footprint?" invert={true}>
+          Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
+        </InfoBox>
+        <InfoBox title="What is Carbon Footprint?" invert={true}>
+          Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
+        </InfoBox>
       </main>
     </div>
   );
