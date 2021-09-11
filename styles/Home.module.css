@@ -38,7 +38,7 @@
 .hero_text_container {
     width: 78%;
     position: absolute;
-    top: 35vh;
+    top: calc(4vw + 28vh);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
