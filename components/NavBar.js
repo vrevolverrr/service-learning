@@ -10,9 +10,11 @@ export default function NavigationBar() {
             <Link href="/minigame" passHref={true}>
                 <p className={styles.nav_item}>MINIGAME</p>
             </Link>
-            <div className={styles.donate_button}>
-                <p>DONATE</p>
-            </div>
+            <Link href="/donate" passHref={true}>
+                <div className={styles.donate_button}>
+                    <p>DONATE</p>
+                </div>
+            </Link>
         </div>
     );
 }
