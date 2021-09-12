@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import styles from '../styles/infobox.module.css';
+import Image from 'next/image';
 import Test from '../public/test.svg';
 import { useState } from 'react';
 import Collapsible from 'react-collapsible';
