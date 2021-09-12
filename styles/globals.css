@@ -6,6 +6,30 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+@font-face {
+  font-family: "MazzardH";
+  src: url("/fonts/MazzardH-Bold.ttf");
+  font-style: bold;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MazzardH";
+  src: url("/fonts/MazzardH-SemiBold.ttf");
+  font-style: medium;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MazzardH";
+  src: url("/fonts/MazzardH-medium.ttf");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -31,6 +55,7 @@ a {
 
 p {
   font-family: "MazzardH";
+  font-weight: 300;
   margin: 0;
 }
 
@@ -40,28 +65,4 @@ div {
 
 * {
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "MazzardH";
-  src: url("/fonts/MazzardH-Bold.ttf");
-  font-style: bold;
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "MazzardH";
-  src: url("/fonts/MazzardH-SemiBold.ttf");
-  font-style: medium;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "MazzardH";
-  src: url("/fonts/MazzardH-medium.ttf");
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
 }

@@ -77,7 +77,7 @@ export default function Home({ uniqueUsers }) {
             </p>},
 
             {name: "Consumption", image: "", description:
-            <p style={{fontFamily: 'MazzardH'}}>
+            <p>
               This includes clothing, footwear, household and all personal goods. All these accounts for a significant amount of an individual&apos;s 
               carbon footprint that comes from gathering materials, production and transport.<br/><br/>
               1. <span style={{fontWeight: '500'}}>Reduce water usage</span>, this lowers the amount of energy required to pump, treat and heat water.<br/><br/>
