@@ -38,19 +38,57 @@ export default function Home({ uniqueUsers }) {
           </div>
           <div className={styles.hero} />
         </div>
-        <InfoBox title="What is Carbon Footprint?" invert={false}>
+        <InfoBox title="What is Carbon Footprint?">
           Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
         </InfoBox>
-        <InfoBox title="What is Carbon Footprint?" invert={true}>
+        <InfoBox title="Causes of Carbon Footprint">
           Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
         </InfoBox>
-        <InfoBox title="What is Carbon Footprint?" invert={true}>
+        <InfoBox reactive={true} title="Reducing Carbon Footprint" subtitle="There are many ways you can contribute to reducing carbon footprint.">
+          {[
+            {name: "Food", image: "", description: 
+            <p>
+              1. <span style={{fontWeight: '500'}}>Eat less meat</span>, as
+              the meat industry has roughly the same carbon emissions of every car, truck and plane in the world combined.<br/><br/>
+              2. <span style={{fontWeight: '500'}}>Buy locally grown food</span>, as a significant amount of greenhouse gases are produced from transporting food 
+              so buying food close to home can reduce those emissions.<br/><br/>
+              3. <span style={{fontWeight: '500'}}>Avoid processed foods</span>, processed foods have higher emissions than fresh food as it includes transportation, 
+              production in factories, and additional packaging.<br/><br/>
+            </p>},
+
+            {name: "Transport", image: "", description:
+            <p>
+              Going carless for a year could save about 2.6 tons of co2 but since most people most likely can&apos;t 
+              adjust to this change. Here&apos;s what you can do:<br/><br/>
+              1. <span style={{fontWeight: '500'}}>Carpool</span>, this way you&apos;re splitting carbon emissions 
+              between the number of people in your car.<br/><br/>
+              2. <span style={{fontWeight: '500'}}>Regularly service your car</span> to keep it more efficient, 
+              this can increase fuel efficiency by up to 49%.<br/><br/>
+              3. <span style={{fontWeight: '500'}}>Drive more efficiently</span> by avoiding accelerating and speeding unnecessarily, 
+              this can reduce mileage by 33%.
+              4. <span style={{fontWeight: '500'}}>Use public transport</span> or walk when possible.<br/><br/>
+            </p>},
+
+            {name: "Household", image: "", description:
+            <p>
+              Energy inefficient homes waste significant amounts of energy through energy inefficient appliances and excessive water use.<br/><br/>
+              1. <span style={{fontWeight: '500'}}>Improve home energy efficiency</span> by using fluorescents or LEDs to reduce emissions.<br/><br/>
+              2. <span style={{fontWeight: '500'}}>Buy products that have five-star energy efficiency labels</span>, these are the most efficient models.<br/><br/>
+            </p>},
+
+            {name: "Consumption", image: "", description:
+            <p>
+              This includes clothing, footwear, household and all personal goods. All these accounts for a significant amount of an individual&apos;s 
+              carbon footprint that comes from gathering materials, production and transport.<br/><br/>
+              1. <span style={{fontWeight: '500'}}>Reduce water usage</span>, this lowers the amount of energy required to pump, treat and heat water.<br/><br/>
+              2. <span style={{fontWeight: '500'}}>Avoid buying more than necessary</span>, this can reduce the emissions from the production of those items.<br/><br/>
+            </p>},
+          ]}
+        </InfoBox>
+        <InfoBox title="What is Carbon Footprint?">
           Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
         </InfoBox>
-        <InfoBox title="What is Carbon Footprint?" invert={true}>
-          Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
-        </InfoBox>
-        <InfoBox title="What is Carbon Footprint?" invert={true}>
+        <InfoBox title="What is Carbon Footprint?">
           Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
         </InfoBox>
       </main>
