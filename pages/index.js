@@ -57,7 +57,7 @@ export default function Home({ uniqueUsers }) {
             </p>},
 
             {name: "Transport", image: "", description:
-            <p>
+            <p style={{fontFamily: 'MazzardH'}}>
               Going carless for a year could save about 2.6 tons of co2 but since most people most likely can&apos;t 
               adjust to this change. Here&apos;s what you can do:<br/><br/>
               1. <span style={{fontWeight: '500'}}>Carpool</span>, this way you&apos;re splitting carbon emissions 
@@ -70,14 +70,14 @@ export default function Home({ uniqueUsers }) {
             </p>},
 
             {name: "Household", image: "", description:
-            <p>
+            <p style={{fontFamily: 'MazzardH'}}>
               Energy inefficient homes waste significant amounts of energy through energy inefficient appliances and excessive water use.<br/><br/>
               1. <span style={{fontWeight: '500'}}>Improve home energy efficiency</span> by using fluorescents or LEDs to reduce emissions.<br/><br/>
               2. <span style={{fontWeight: '500'}}>Buy products that have five-star energy efficiency labels</span>, these are the most efficient models.<br/><br/>
             </p>},
 
             {name: "Consumption", image: "", description:
-            <p>
+            <p style={{fontFamily: 'MazzardH'}}>
               This includes clothing, footwear, household and all personal goods. All these accounts for a significant amount of an individual&apos;s 
               carbon footprint that comes from gathering materials, production and transport.<br/><br/>
               1. <span style={{fontWeight: '500'}}>Reduce water usage</span>, this lowers the amount of energy required to pump, treat and heat water.<br/><br/>
