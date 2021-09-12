@@ -12,6 +12,7 @@
 }
 
 .nav_item {
+    font-weight: 400;
     transition: 0.05s ease-in;
 }
 

@@ -17,8 +17,6 @@
     font-weight: 300;
 }
 
-.item:hover,
-.item:active, 
-.item:focus {
+.footer_item:hover {
     cursor: pointer;
 }
