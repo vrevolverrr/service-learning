@@ -70,7 +70,7 @@ export default function Home({ uniqueUsers }) {
             </p>},
 
             {name: "Household", image: "", description:
-            <p style={{fontWeight: '300'}}>
+            <p>
               Energy inefficient homes waste significant amounts of energy through energy inefficient appliances and excessive water use.<br/><br/>
               1. <span style={{fontWeight: '500'}}>Improve home energy efficiency</span> by using fluorescents or LEDs to reduce emissions.<br/><br/>
               2. <span style={{fontWeight: '500'}}>Buy products that have five-star energy efficiency labels</span>, these are the most efficient models.<br/><br/>
