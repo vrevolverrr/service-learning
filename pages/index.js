@@ -1,14 +1,16 @@
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import CountUp from 'react-countup';
 import TextTransition, { presets } from "react-text-transition";
+import CountUp from 'react-countup';
 import InfoBox from '../components/InfoBox';
 import styles from '../styles/Home.module.css';
+import LeafIcon from '../public/leaf.svg';
 
 export default function Home({ uniqueUsers }) {
 
   // Scrolling Hero Text
-  const HERO_TEXT1 = ["CARBON", "ENERGY"];
-  const HERO_TEXT2 = ["NEUTRAL", "SAVING"];
+  const HERO_TEXT1 = ["CARBON", "ENERGY", "CARBON", "CLIMATE", "ENERGY"];
+  const HERO_TEXT2 = ["NEUTRAL", "SAVING", "OFFSET", "FRIENDLY", "EFFICIENT"];
 
   const [heroIndex, setHeroIndex] = useState(0);
 
@@ -23,8 +25,7 @@ export default function Home({ uniqueUsers }) {
   }, []);
 
   return (
-    <div>
-      <main>
+    <main>
         <div className={styles.hero_container}>
           <CountUp start={0} end={uniqueUsers} duration={1.5} delay={0} separator=",">
             {({ countUpRef, start }) => (
@@ -41,10 +42,105 @@ export default function Home({ uniqueUsers }) {
         <InfoBox title="What is Carbon Footprint?">
           Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
         </InfoBox>
-        <InfoBox title="Causes of Carbon Footprint">
-          Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
-        </InfoBox>
-        <InfoBox reactive={true} title="Reducing Carbon Footprint" subtitle="There are many ways you can contribute to reducing carbon footprint.">
+
+        {/* Causes of Carbon Footprint */}
+        <div style={{width: '100%', height: '720px', padding: '40px', display: 'flex', alignItems: 'center', flexDirection: 'column', backgroundColor: '#ffffff'}}>
+          <p style={{fontSize: '40px', fontWeight: '400', textAlign: 'center'}}>What Are The Causes?</p>
+          
+          <div style={{height: '3vh'}}/>
+
+          <div style={{display: 'flex', alignItems: 'center'}}>
+            <div style={{width: '150px', height: '1px', borderTop: '2px solid #424242'}}/>
+            <div style={{margin: '0 10px 0 15px'}}><Image src={LeafIcon} alt="leaf icon"/></div>
+            <div style={{width: '150px', height: '1px', borderTop: '2px solid #424242'}}/>
+          </div>
+
+          <div style={{height: '3vh'}}/>
+
+            <p className={styles.section_description}>
+              We live our everyday lives leaving a carbon footprint. These are how your daily activities adversely affect our environment.
+            </p>
+
+          <div style={{height: '6vh'}}/>
+
+        </div>
+
+        {/* Reducing Carbon Footprint */}
+        <div style={{width: '100%', height: '720px', padding: '40px', display: 'flex', alignItems: 'center', flexDirection: 'column', backgroundColor: '#ffffff'}}>
+          <p style={{fontSize: '40px', fontWeight: '400', textAlign: 'center'}}>How Do We Reduce?</p>
+          
+          <div style={{height: '3vh'}}/>
+
+          <div style={{display: 'flex', alignItems: 'center'}}>
+            <div style={{width: '150px', height: '1px', borderTop: '2px solid #424242'}}/>
+            <div style={{margin: '0 10px 0 15px'}}><Image src={LeafIcon} alt="leaf icon"/></div>
+            <div style={{width: '150px', height: '1px', borderTop: '2px solid #424242'}}/>
+          </div>
+
+          <div style={{height: '3vh'}}/>
+
+          <p className={styles.section_description}>
+            Small lifestyle changes can can reduce our carbon footprint. Every small contribution helps save our environment.
+          </p>
+          
+          <div style={{height: '6vh'}}/>
+          
+          <div className={styles.scrollable_container}>
+            <div className={styles.card}>
+              <p style={{fontSize: '34px', fontWeight: '500'}}>FOOD</p>
+            </div>
+            <div className={styles.card}>
+              <p style={{fontSize: '34px', fontWeight: '500'}}>TRANSPORT</p>
+            </div>
+            <div className={styles.card}>
+              <p style={{fontSize: '34px', fontWeight: '500'}}>HOUSEHOLD</p>
+            </div>
+            <div className={styles.card}>
+              <p style={{fontSize: '34px', fontWeight: '500'}}>CONSUMPTION</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Donation advert banner */}
+        <div style={{width: '100%', height: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffffff'}}>
+          <div style={{
+            width: '95%', maxWidth: '1800px', height: '150px', padding: '0 20px 0 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around', backgroundColor: '#f5f5f5', borderRadius: '20px'}}>
+            <div style={{transform: 'scale(1.4)', position: 'relative', top: '-15px'}}><Image src={LeafIcon} alt="leaf icon"/></div>
+            <p style={{position: 'relative', top: '0px', textAlign: 'center', fontSize: '22px'}}>Take it a step further and plant a tree with us today.</p>
+            <button style={{
+              position: 'relative', top: '22px',
+              width: '180px', height: '45px', fontSize: '18px', fontFamily: 'MazzardH', 
+              borderRadius: '25px', border: 'none', backgroundColor: '#ff4500', color: 'white'}}>DONATE</button>
+          </div>
+        </div>
+
+        <div style={{height: '3vh'}}/>
+
+        {/* NASA Climate Time Machine iframe */}
+        <div style={{width: '100%', height: 'fit-content', padding: '40px', display: 'flex', alignItems: 'center', flexDirection: 'column', backgroundColor: '#ffffff'}}>
+          <p style={{fontSize: '40px', fontWeight: '400', textAlign: 'center'}}>How Is Our Planet Changing?</p>
+          
+          <div style={{height: '3vh'}}/>
+
+          <div style={{display: 'flex', alignItems: 'center'}}>
+            <div style={{width: '150px', height: '1px', borderTop: '2px solid #424242'}}/>
+            <div style={{margin: '0 10px 0 15px'}}><Image src={LeafIcon} alt="leaf icon"/></div>
+            <div style={{width: '150px', height: '1px', borderTop: '2px solid #424242'}}/>
+          </div>
+
+          <div style={{height: '3vh'}}/>
+
+          <p className={styles.section_description}>
+            NASA&apos; visualizations to show how some of the key indicators of climate change have changed in Earth&apos;s recent history.
+          </p>
+          
+          <div style={{height: '6vh'}}/>
+                    
+          <iframe src="https://climate.nasa.gov/interactives/climate-time-machine" width='95%' height='950px'/>
+
+        </div>
+        {/*
+        <InfoBox reactive={true} title="Causes of Carbon Footprint" subtitle="There are many ways you can contribute to reducing carbon footprint.">
           {[
             {name: "Food", image: "", description: 
             <p>
@@ -88,14 +184,8 @@ export default function Home({ uniqueUsers }) {
             </p>},
           ]}
         </InfoBox>
-        <InfoBox title="What is Carbon Footprint?">
-          Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
-        </InfoBox>
-        <InfoBox title="What is Carbon Footprint?">
-          Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
-        </InfoBox>
+        */}
       </main>
-    </div>
   );
 }
 

@@ -2,12 +2,10 @@ import styles from '../styles/Contact.module.css';
 
 export default function Contact() {
     return (
-        <div>
-            <main>
-                <div className={styles.main}>
-
-                </div>
-            </main>
-        </div>
+        <main className={styles.main}>
+            <div className={styles.header}>
+                <p className={styles.header_text}>CONTACT US</p>
+            </div>
+        </main>
     );
 }

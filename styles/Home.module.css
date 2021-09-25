@@ -55,3 +55,35 @@
 .infobox {
     height: 500px;
 }
+
+.section_description {
+    width: 100%;
+    max-width: 700px;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.scrollable_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.scrollable_container::-webkit-scrollbar:vertical {
+    height: 5px;
+    background-color: red;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 560px;
+    height: 380px;
+    margin-right: 20px;
+    padding: 25px 20px 25px 20px;
+    background-color: #beede0;
+    border-radius: 25px;
+    /* box-shadow: #110c2e1a 0px 28px 100px 0px; */
+}
