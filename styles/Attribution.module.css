@@ -17,6 +17,17 @@
 }
 
 .header_text {
-    font-size: 50px;
     font-weight: 500;
+}
+
+@media only screen and (min-width: 0) {
+    .header_text {
+        font-size: 10vw;
+    }
+}
+
+@media only screen and (min-width: 460px) {
+    .header_text {
+        font-size: 50px;
+    }
 }
