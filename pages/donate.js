@@ -46,11 +46,11 @@ export default function Donate() {
                 <div>
                     <div style={{height: '15px'}}/>
                     <div className={styles.donation_progress} style={{width: '800px'}}>
-                        <div className={styles.progress_bar} style={{width: '500px'}}/>
+                        <div className={styles.progress_bar} style={{width: '0px'}}/>
                     </div>
                     <div style={{height: '15px'}}/>
                     <p style={{fontSize: '18px', color: '#737373', textAlign: 'right'}}>
-                        <span style={{fontSize: '24px', color: '#000000'}}>RM520</span> of RM1000 raised</p>
+                        <span style={{fontSize: '24px', color: '#000000'}}>RM0</span> of RM1000 raised</p>
                 </div>
             </Section>
 
