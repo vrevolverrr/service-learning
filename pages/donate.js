@@ -41,8 +41,8 @@ export default function Donate() {
             <div style={{height: '10vh'}}/>
 
             <Section height='4vh' title="Donation Progress" 
-                description="Trees are the most efficient and cost-effective technology for the offsetting of greenhouse gases.
-                By planting a tree, you support Malaysia's effort in fighting climate change.">
+                description="We hope to raise RM1000 on behalf of APE Malaysia. Every small contribution counts. 
+                The donation progress is updated periodically.">
                 <div>
                     <div style={{height: '15px'}}/>
                     <div className={styles.donation_progress} style={{width: '800px'}}>
