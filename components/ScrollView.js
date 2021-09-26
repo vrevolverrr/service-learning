@@ -9,8 +9,16 @@ export default function ScrollView(props) {
         clientX: 0,
     });
 
-    const onMouseDown = e => setScrollState({...scrollState, isScrolling: true, clientX: e.clientX});
-    const onMouseUp = () => setScrollState({...scrollState, isScrolling: false});
+    const onMouseDown = e => {
+        e.preventDefault();
+        if (e.button != 0) return;
+        setScrollState({...scrollState, isScrolling: true, clientX: e.clientX});
+    };
+
+    const onMouseUp = () => {
+        setScrollState({...scrollState, isScrolling: false});
+    };
+
     const onMouseMove = e => {
         const { isScrolling, clientX, scrollX } = scrollState;
         if (isScrolling) {

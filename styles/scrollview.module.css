@@ -4,8 +4,3 @@
     flex-wrap: nowrap;
     overflow-x: auto;
 }
-
-.scrollable_container::-webkit-scrollbar:vertical {
-    height: 5px;
-    background-color: red;
-}

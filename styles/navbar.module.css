@@ -1,10 +1,43 @@
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 0) {
+    .logo {
+        width: 80px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .logo {
+        width: 100px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .logo {
+        width: 110px;
+    }
+}
+
+.social_media_icon {
+    transition: 0.1s ease-in-out;
+}
+
+.social_media_icon:hover {
+    transform: scale(1.05);
+}
+
 .header {
     position: absolute;
     right: 20px;
     top: 10px;
     margin-right: 20px;
     margin-top: 15px;
-    width: 420px;
+    width: 250px;
     display: flex;
     justify-content: space-between;
     align-items: center;

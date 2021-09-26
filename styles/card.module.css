@@ -3,7 +3,6 @@
     height: 380px;
     margin-right: 20px;
     padding: 25px 20px 25px 20px;
-    background-color: #AFE8AE;
     border-radius: 25px;
     pointer-events: none;
     overflow: hidden;
@@ -13,7 +12,6 @@
 .card_title {
     font-size: 34px; 
     font-weight: 500;
-    color: #013D00;
     user-select: none;
     -webkit-user-drag: none;
 }
@@ -25,7 +23,7 @@
     font-weight: 300;
     line-height: 1.5;
     user-select: none;
-    color: #032602;
+    color: #131313;
 }
 
 .card_image {

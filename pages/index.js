@@ -8,9 +8,12 @@ import ScrollView from '../components/ScrollView';
 import styles from '../styles/Home.module.css';
 import LeafIcon from '../public/leaf.svg';
 import FoodIcon from '../public/reducing/food.png';
-import CarIcon from '../public/reducing/car.png';
-import HouseIcon from '../public/reducing/house.png'
+import TransportIcon from '../public/reducing/car.png';
+import HouseholdIcon from '../public/reducing/house.png'
 import ConsumptionIcon from '../public/reducing/consumption.png'
+import ClimateIcon from '../public/effects/climate.png';
+import HealthIcon from '../public/effects/lungs.png';
+import EcosystemIcon from '../public/effects/tree.png';
 
 export default function Home({ uniqueUsers }) {
 
@@ -54,53 +57,6 @@ export default function Home({ uniqueUsers }) {
 
         <div style={{height: '3vh'}}/>
 
-        {/* Causes of Carbon Footprint */}
-        <div className={styles.section_div}>
-          <p style={{fontSize: '40px', fontWeight: '400', textAlign: 'center'}}>What Are The Causes?</p>
-          
-          <div style={{height: '3vh'}}/>
-
-          <div style={{display: 'flex', alignItems: 'center'}}>
-            <div style={{width: '150px', height: '1px', borderTop: '2px solid #424242'}}/>
-            <div style={{margin: '0 10px 0 15px'}}><Image src={LeafIcon} alt="leaf icon"/></div>
-            <div style={{width: '150px', height: '1px', borderTop: '2px solid #424242'}}/>
-          </div>
-
-          <div style={{height: '3vh'}}/>
-
-          <p className={styles.section_description}>
-              We live our everyday lives leaving a carbon footprint. These are how your daily activities adversely affect our environment.
-          </p>
-
-          <div style={{height: '6vh'}}/>
-          
-          <ScrollView>
-            <Card title="FOOD" image={FoodIcon}>
-              The food we comsume affects our carbon footprint as the process of producing some foods leave a greater carbon 
-              footprint than others. Eating less meat helps a lot since the meat industry is one of the largest culprits of 
-              carbon emissions accouting for 14.5% of total man-made emissions every year.
-            </Card>
-            <Card title="TRANSPORT" image={CarIcon} imageStyles={{transform: 'scaleX(-1)'}}>
-              Going carless for a year could reduce about 2.6 tons of carbon emissions. However, this is impractical for most people. Carpooling is a
-              good alternative to this as your carbon footprint is split between several people. Always use public transport<br/>or walk when possible
-              especially for shorter journeys.
-            </Card>
-            <Card title="HOUSEHOLD" image={HouseIcon} imageStyles={{width: '500px', height: '500px', left: '290px', top: '-200px'}}>
-              Many homes waste significant amounts of energy through energy inefficient appliances. Home energy efficiency 
-              can be improved by using fluorescents or LEDs to replace high power bulbs. Also take note of energy efficiency labels of appliances 
-              and only get products with five-star energy efficiency labels.
-            </Card>
-            <Card title="CONSUMPTION" image={ConsumptionIcon} imageStyles={{width: '260px', height: '260px', left: '340px', top: '-185px'}}>
-              This includes personal goods which accounts for a significant amount of an individual&apos;s carbon footprint that comes 
-              from production and transport. Reducing water usage lowers the amount of energy required 
-              to pump, treat and heat water. Also avoid buying more than necessary to prevent excessive production.
-            </Card>
-          </ScrollView>
-          
-        </div>
-
-        <div style={{height: '8vh'}}/>
-
         {/* Reducing Carbon Footprint */}
         <div className={styles.section_div}>
           <p style={{fontSize: '40px', fontWeight: '400', textAlign: 'center'}}>How Do We Reduce?</p>
@@ -122,22 +78,22 @@ export default function Home({ uniqueUsers }) {
           <div style={{height: '6vh'}}/>
 
           <ScrollView>
-            <Card title="FOOD" image={FoodIcon}>
+            <Card title="FOOD" image={FoodIcon} backgroundColor="#AFE8AE" titleColor="#013D00">
               The food we comsume affects our carbon footprint as the process of producing some foods leave a greater carbon 
               footprint than others. Eating less meat helps a lot since the meat industry is one of the largest culprits of 
               carbon emissions accouting for 14.5% of total man-made emissions every year.
             </Card>
-            <Card title="TRANSPORT" image={CarIcon} imageStyles={{transform: 'scaleX(-1)'}}>
+            <Card title="TRANSPORT" image={TransportIcon} backgroundColor="#AFE8AE" titleColor="#013D00" imageStyles={{transform: 'scaleX(-1)'}}>
               Going carless for a year could reduce about 2.6 tons of carbon emissions. However, this is impractical for most people. Carpooling is a
               good alternative to this as your carbon footprint is split between several people. Always use public transport<br/>or walk when possible
               especially for shorter journeys.
             </Card>
-            <Card title="HOUSEHOLD" image={HouseIcon} imageStyles={{width: '500px', height: '500px', left: '290px', top: '-200px'}}>
+            <Card title="HOUSEHOLD" image={HouseholdIcon} backgroundColor="#AFE8AE" titleColor="#013D00" imageStyles={{width: '500px', height: '500px', left: '290px', top: '-200px'}}>
               Many homes waste significant amounts of energy through energy inefficient appliances. Home energy efficiency 
               can be improved by using fluorescents or LEDs to replace high power bulbs. Also take note of energy efficiency labels of appliances 
               and only get products with five-star energy efficiency labels.
             </Card>
-            <Card title="CONSUMPTION" image={ConsumptionIcon} imageStyles={{width: '260px', height: '260px', left: '340px', top: '-185px'}}>
+            <Card title="CONSUMPTION" image={ConsumptionIcon} backgroundColor="#AFE8AE" titleColor="#013D00" imageStyles={{width: '260px', height: '260px', left: '340px', top: '-185px'}}>
               This includes personal goods which accounts for a significant amount of an individual&apos;s carbon footprint that comes 
               from production and transport. Reducing water usage lowers the amount of energy required 
               to pump, treat and heat water. Also avoid buying more than necessary to prevent excessive production.
@@ -154,10 +110,58 @@ export default function Home({ uniqueUsers }) {
             <div style={{transform: 'scale(1.4)', position: 'relative', top: '-15px'}}><Image src={LeafIcon} alt="leaf icon"/></div>
             <p style={{position: 'relative', top: '0px', textAlign: 'center', fontSize: '22px'}}>Take it a step further and plant a tree with us today.</p>
             <button style={{
-              position: 'relative', top: '22px',
+              position: 'relative', top: '22px', cursor: 'pointer',
               width: '180px', height: '45px', fontSize: '18px', fontFamily: 'MazzardH', 
               borderRadius: '25px', border: 'none', backgroundColor: '#ff4500', color: 'white'}}>DONATE</button>
           </div>
+        </div>
+
+        <div style={{height: '8vh'}}/>
+
+        {/* Effects of Carbon Footprint */}
+        <div className={styles.section_div}>
+          <p style={{fontSize: '40px', fontWeight: '400', textAlign: 'center'}}>What Are The Effects?</p>
+          
+          <div style={{height: '3vh'}}/>
+
+          <div style={{display: 'flex', alignItems: 'center'}}>
+            <div style={{width: '150px', height: '1px', borderTop: '2px solid #424242'}}/>
+            <div style={{margin: '0 10px 0 15px'}}><Image src={LeafIcon} alt="leaf icon"/></div>
+            <div style={{width: '150px', height: '1px', borderTop: '2px solid #424242'}}/>
+          </div>
+
+          <div style={{height: '3vh'}}/>
+
+          <p className={styles.section_description}>
+              We live our everyday lives leaving a carbon footprint. These are how your daily activities adversely affect our environment.
+          </p>
+
+          <div style={{height: '6vh'}}/>
+          
+          <ScrollView>
+            <Card title="CLIMATE CHANGE" image={ClimateIcon} imageStyles={{left: '325px', top: '-220px'}} 
+            backgroundColor="#AED7E8" titleColor="#004360">
+              The rise in average global temperature is a result of the high carbon emissions. 
+              This warming causes extreme weather events like tropical storms, drought and heat waves which negatively affects 
+              the agriculture sector as crops are unable to grow optimally which in turn affects the livelihood of Malaysian farmers.
+            </Card>
+            <Card title="HEALTH EFFECTS" image={HealthIcon} backgroundColor="#AED7E8" titleColor="#004360" imageStyles={{transform: 'rotate(4deg)'}}>
+              Exposure to too much of greenhouse gases can lead to health effects such as headaches, dizziness, 
+              restlessness, a tingling or pins or needles feeling, difficulty breathing, sweating, tiredness, 
+              increased heart rate, elevated blood pressure, coma, asphyxia, and convulsion.
+            </Card>
+            <Card title="ECOSYSTEM" image={EcosystemIcon} backgroundColor="#AED7E8" titleColor="#004360" imageStyles={{width: '420px', height: '420px', left: '320px', top: '-210px'}}>
+              Malaysia is the home of rich biodiversity. Most plants and animals live are sensitive to climate conditions, 
+              such as temperature and rainfall patterns. Therefore, the change in the climate conditions has affected the plants and 
+              animals here as well as the makeup of the entire ecosystem.
+            </Card>
+            <Card title="ECOSYSTEM" image={HouseholdIcon} backgroundColor="#AED7E8" titleColor="#004360" imageStyles={{width: '500px', height: '500px', left: '290px', top: '-200px'}}>
+              Many homes waste significant amounts of energy through energy inefficient appliances. Home energy efficiency 
+              can be improved by using fluorescents or LEDs to replace high power bulbs. Also take note of energy efficiency labels of appliances 
+              and only get products with five-star energy efficiency labels.
+            </Card>
+          </ScrollView>
+          
         </div>
 
         <div style={{height: '8vh'}}/>
