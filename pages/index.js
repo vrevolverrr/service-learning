@@ -52,6 +52,8 @@ export default function Home({ uniqueUsers }) {
           <div className={styles.hero} />
         </div>
 
+        <div style={{height: '3vh'}}/>
+
         {/* What Is Carbon Footprint */}
         <InfoBox title="What is Carbon Footprint?" image={Test}>
           Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.

@@ -7,7 +7,7 @@ export default function InfoBox(props) {
             <div className={styles.side_image}>
                 <Image src={props.image} alt="carbon footprint"/>
             </div>
-            <div style={{width: '20px', height: '100%'}}/>
+            <div style={{width: '40px', height: '100%'}}/>
                 <div className={styles.content}>
                     <p className={styles.title}>{props.title}</p>
                     <div className={styles.paragraph}>
