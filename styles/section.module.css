@@ -1,0 +1,17 @@
+.section_div {
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section_description {
+    width: 100%;
+    max-width: 700px;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+}

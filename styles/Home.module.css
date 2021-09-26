@@ -52,29 +52,6 @@
     font-family: "MazzardH";
 }
 
-.infobox {
-    height: 500px;
-}
-
-.section_div {
-    width: 100%;
-    height: fit-content;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: #ffffff;
-}
-
-.section_description {
-    width: 100%;
-    max-width: 700px;
-    font-size: 21px;
-    font-weight: 300;
-    line-height: 1.5;
-    text-align: center;
-}
-
 .card {
     width: 560px;
     height: 380px;

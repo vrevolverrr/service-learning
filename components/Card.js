@@ -10,7 +10,7 @@ export default function Card(props) {
                 {props.children}
             </p>
             <div className={styles.card_image} style={props.imageStyles}>
-                <Image src={props.image} alt="food" />
+                <Image src={props.image} alt="card" />
             </div>
       </div>
     );

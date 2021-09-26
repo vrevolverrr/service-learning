@@ -1,14 +1,13 @@
-import styles from '../styles/infobox.module.css';
 import Image from 'next/image';
-import Test from '../public/test.svg';
+import styles from '../styles/infobox.module.css';
 
 export default function InfoBox(props) {
     return (
         <div className={styles.container}>
             <div className={styles.side_image}>
-                <Image src={Test} alt="carbon footprint"/>
+                <Image src={props.image} alt="carbon footprint"/>
             </div>
-            <div className={styles.spacer}/>
+            <div style={{width: '20px', height: '100%'}}/>
                 <div className={styles.content}>
                     <p className={styles.title}>{props.title}</p>
                     <div className={styles.paragraph}>

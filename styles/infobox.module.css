@@ -5,18 +5,12 @@
     justify-content: center;
     align-items: center;
     padding: 30px 25px 30px 25px;
-    background-color: #ffffff
 }
 
 .side_image {
     width: 312px;
     height: 312px;
     margin: 30px;
-}
-
-.spacer {
-    width: 50px;
-    height: 100%;
 }
 
 .title {

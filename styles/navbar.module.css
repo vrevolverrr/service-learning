@@ -44,17 +44,6 @@
     font-size: 18px;
 }
 
-.nav_item {
-    font-weight: 400;
-    transition: 0.05s ease-in;
-}
-
-.nav_item:focus,
-.nav_item:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
 .donate_button {
     width: 135px;
     height: 40px;
@@ -80,6 +69,17 @@
     .header {
         display: none;
     }
+}
+
+@keyframes navmenuanim {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.navmenu {
+    animation-name: navmenuanim;
+    animation-duration: 2s;
+    animation-delay: 2s;
 }
 
 .nav {
