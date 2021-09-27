@@ -144,7 +144,7 @@ export default function Home({ uniqueUsers }) {
 }
 
 /* TODO GET ANALYTICS */
-export async function getStaticSideProps() {
+export async function getStaticProps() {
   /**
    * Fetches analytics data on the unique users of the site
    * 
