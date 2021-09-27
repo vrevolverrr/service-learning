@@ -1,13 +1,11 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { updateAnalytics } from '../services/firebase';
 import TextTransition, { presets } from "react-text-transition";
 import CountUp from 'react-countup';
 import Card from '../components/Card';
 import InfoBox from '../components/InfoBox';
 import ScrollView from '../components/ScrollView';
 import styles from '../styles/Home.module.css';
-import LeafIcon from '../public/leaf.svg';
 import CarbonFootprintIcon from '../public/carbonfootprint.svg';
 import FoodIcon from '../public/reducing/food.png';
 import TransportIcon from '../public/reducing/car.png';
@@ -21,6 +19,10 @@ import Section from '../components/Section';
 import Advert from '../components/Advert';
 
 export default function Home({ uniqueUsers }) {
+
+  try {
+    document.cookie = "visited=true";
+  } catch {}
 
   // Scrolling Hero Text
   const HERO_TEXT1 = ["CARBON", "ENERGY", "CARBON", "CLIMATE", "ENERGY"];
@@ -142,19 +144,19 @@ export default function Home({ uniqueUsers }) {
 }
 
 /* TODO GET ANALYTICS */
-export async function getStaticProps() {
+export async function getServerSideProps(context) {
   /**
    * Fetches analytics data on the unique users of the site
    * 
    * @returns {object} - Props to be passed to page
    */
-  const res = await fetch("http://www.randomnumberapi.com/api/v1.0/random?min=1000&max=1000000&count=1");
-  const uniqueUsers = parseInt((await res.text()).replace('[', '').replace(']', ''));
+
+  const cookies = context.req.headers.cookie;
+  const uniqueUsers = await updateAnalytics(cookies == undefined);
 
   return {
     props: {
       uniqueUsers,
     },
-    revalidate: 10,
   };
 }
