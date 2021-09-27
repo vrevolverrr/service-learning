@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import TextTransition, { presets } from "react-text-transition";
 import CountUp from 'react-countup';
@@ -7,7 +8,7 @@ import InfoBox from '../components/InfoBox';
 import ScrollView from '../components/ScrollView';
 import styles from '../styles/Home.module.css';
 import LeafIcon from '../public/leaf.svg';
-import Test from '../public/test.svg';
+import CarbonFootprintIcon from '../public/carbonfootprint.svg';
 import FoodIcon from '../public/reducing/food.png';
 import TransportIcon from '../public/reducing/car.png';
 import HouseholdIcon from '../public/reducing/house.png'
@@ -15,6 +16,7 @@ import ConsumptionIcon from '../public/reducing/consumption.png'
 import ClimateIcon from '../public/effects/climate.png';
 import HealthIcon from '../public/effects/lungs.png';
 import EcosystemIcon from '../public/effects/tree.png';
+import PollutionIcon from '../public/effects/rain.png';
 import Section from '../components/Section';
 
 export default function Home({ uniqueUsers }) {
@@ -55,7 +57,7 @@ export default function Home({ uniqueUsers }) {
         <div style={{height: '3vh'}}/>
 
         {/* What Is Carbon Footprint */}
-        <InfoBox title="What is Carbon Footprint?" image={Test}>
+        <InfoBox title="What is Carbon Footprint?" image={CarbonFootprintIcon}>
           Carbon footprint is the total amount of greenhouse gas emissions caused directly and indirectly by an individual, organization, event or product.
         </InfoBox>
 
@@ -109,10 +111,10 @@ export default function Home({ uniqueUsers }) {
               such as temperature and rainfall patterns. Therefore, the change in the climate conditions has affected the plants and 
               animals here as well as the makeup of the entire ecosystem.
             </Card>
-            <Card title="ECOSYSTEM" image={HouseholdIcon} backgroundColor="#AED7E8" titleColor="#004360" imageStyles={{width: '500px', height: '500px', left: '290px', top: '-200px'}}>
-              Many homes waste significant amounts of energy through energy inefficient appliances. Home energy efficiency 
-              can be improved by using fluorescents or LEDs to replace high power bulbs. Also take note of energy efficiency labels of appliances 
-              and only get products with five-star energy efficiency labels.
+            <Card title="POLLUTION" image={PollutionIcon} backgroundColor="#AED7E8" titleColor="#004360" imageStyles={{width: '220px', height: '220px', left: '330px', top: '-190px'}}>
+              The emission of greenhouse gases is a major contributor to air pollution. One of the little-discussed issue with air pollution is 
+              acid rain. As the greenhouse gases combine with moisture in the air, acid rain is formed. Acid rain damages forests, freshwater, 
+              soil and even causing the corrosion of buildings.
             </Card>
           </ScrollView>
         </Section>
@@ -128,10 +130,14 @@ export default function Home({ uniqueUsers }) {
             backgroundColor: '#f5f5f5', borderRadius: '20px'}}>
             <div style={{transform: 'scale(1.4)', position: 'relative', top: '-15px'}}><Image src={LeafIcon} alt="leaf icon"/></div>
             <p style={{position: 'relative', top: '0px', textAlign: 'center', fontSize: '22px'}}>Take it a step further and plant a tree with us today.</p>
-            <button style={{
-              position: 'relative', top: '22px', cursor: 'pointer',
-              width: '180px', height: '45px', fontSize: '18px', fontFamily: 'MazzardH', 
-              borderRadius: '25px', border: 'none', backgroundColor: '#ff4500', color: 'white'}}>DONATE</button>
+            <Link href="/donate" passHref={true}>
+              <button style={{
+                position: 'relative', top: '22px', cursor: 'pointer',
+                width: '180px', height: '45px', fontSize: '18px', fontFamily: 'MazzardH', 
+                borderRadius: '25px', border: 'none', backgroundColor: '#ff4500', color: 'white'}}>
+                  DONATE
+              </button>
+            </Link>
           </div>
         </div>
 

@@ -7,6 +7,7 @@ import Quah from '../public/profile_imgs/quah.jpg';
 import Alan from '../public/profile_imgs/alan.jpg';
 import Adam from '../public/profile_imgs/adam.jpg'
 import Ethan from '../public/profile_imgs/ethan.jpg'
+import Banner from '../components/Banner';
 
 function Profile(props) {
     return (
@@ -26,9 +27,7 @@ function Profile(props) {
 export default function About() {
     return (
         <div className={styles.main}>
-            <div className={styles.header}>
-                <p className={styles.header_text}>ABOUT US</p>
-            </div>
+            <Banner>ABOUT US</Banner>
             
             <div style={{height: '3vh'}}/>
             

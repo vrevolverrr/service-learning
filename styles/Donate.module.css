@@ -69,3 +69,9 @@
 .progress_bar {
     background-color: #71d45b;
 }
+
+.slideshow_img {
+    width: 700px;
+    height: auto;
+    margin-right: 25px;
+}

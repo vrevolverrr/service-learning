@@ -1,8 +1,15 @@
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import styles from '../styles/Donate.module.css';
-import Section from '../components/Section';
-import Photosynthesis from '../public/donate/photosynthesis.gif';
 import InfoBox from '../components/InfoBox';
+import Section from '../components/Section';
+import ScrollView from '../components/ScrollView';
+import Photosynthesis from '../public/donate/photosynthesis.gif';
+import Reforestation0 from '../public/ape/0.jpg';
+import Reforestation1 from '../public/ape/1.jpg';
+import Reforestation2 from '../public/ape/2.jpg';
+import Reforestation3 from '../public/ape/3.jpg';
+import Reforestation4 from '../public/ape/4.jpg';
 
 export default function Donate() {
     const [plantingSite, setPlantingSite] = useState(false);
@@ -43,18 +50,18 @@ export default function Donate() {
             <Section height='4vh' title="Donation Progress" 
                 description="We hope to raise RM1000 on behalf of APE Malaysia. Every small contribution counts. 
                 The donation progress is updated periodically.">
-                <div>
-                    <div style={{height: '15px'}}/>
-                    <div className={styles.donation_progress} style={{width: '800px'}}>
-                        <div className={styles.progress_bar} style={{width: '0px'}}/>
+                <div style={{width: '90vw', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <div style={{width: 'fit-content', height: '15px'}}/>
+                    <div className={styles.donation_progress} style={{width: '100%'}}>
+                        <div className={styles.progress_bar} style={{width: '0'}}/>
                     </div>
                     <div style={{height: '15px'}}/>
-                    <p style={{fontSize: '18px', color: '#737373', textAlign: 'right'}}>
+                    <p style={{fontSize: '18px', color: '#737373'}}>
                         <span style={{fontSize: '24px', color: '#000000'}}>RM0</span> of RM1000 raised</p>
                 </div>
             </Section>
 
-            <div style={{height: '10vh'}}/>
+            <div style={{height: '6vh'}}/>
 
             <Section height='2vh' title="Why Plant A Tree?" 
                 description="Trees are the most efficient and cost-effective technology for the offsetting of greenhouse gases.
@@ -64,6 +71,19 @@ export default function Donate() {
                     Just like we inhale oxygen (O2) and exhale CO2, trees use CO2 to produce glucose and release O2.
                     This makes them perfect machines for the reduction of anthropogenic emissions not only of CO2.
                 </InfoBox>
+            </Section>
+
+            <div style={{height: '6vh'}}/>
+
+            <Section height='2vh' title="Why Is Reforestation Important?" 
+                description="The climate crisis we are experiencing is a complex phenomenon. Human beings and their actions are the main factors fuelling this crisis. They are also the only ones who can do something about it. How?
+                As one of the most performant actions in the counteraction of the climate crisis, reforestation is a good starting point.">
+                <ScrollView>
+                    <div className={styles.slideshow_img}><Image src={Reforestation0} alt=""></Image></div>
+                    <div className={styles.slideshow_img}><Image src={Reforestation0} alt=""></Image></div>
+                    <div className={styles.slideshow_img}><Image src={Reforestation0} alt=""></Image></div>
+                    <div className={styles.slideshow_img}><Image src={Reforestation0} alt=""></Image></div>
+                </ScrollView>
             </Section>
         </main>
     );
