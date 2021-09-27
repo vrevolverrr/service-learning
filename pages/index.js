@@ -23,7 +23,6 @@ export default function Home({ uniqueUsers }) {
   if (process.browser && document.cookie == '') {
     updateVisitorCount();
     document.cookie = "visited=true";
-    updatedCount = true;
   }
 
   // Scrolling Hero Text
@@ -155,8 +154,6 @@ export async function getStaticProps() {
 
   // const cookies = context.req.headers.cookie;
   const uniqueUsers = await getVisitorCount();
-
-  console.log(uniqueUsers);
 
   return {
     props: {
