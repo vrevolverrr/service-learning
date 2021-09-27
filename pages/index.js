@@ -68,7 +68,7 @@ export default function Home({ uniqueUsers }) {
         <div style={{height: '3vh'}}/>
 
         {/* Reducing Carbon Footprint */}
-        <Section title="How Do We Reduce?" description="Small lifestyle changes can can reduce our carbon footprint. Every small contribution helps save our environment.">
+        <Section title="How Do We Reduce?" description="Small lifestyle changes can reduce our carbon footprint. Every small contribution helps save our environment.">
         <ScrollView>
             <Card title="FOOD" image={FoodIcon} backgroundColor="#AFE8AE" titleColor="#013D00">
               The food we comsume affects our carbon footprint as the process of producing some foods leave a greater carbon 
