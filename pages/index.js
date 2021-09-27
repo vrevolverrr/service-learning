@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { updateAnalytics } from '../services/firebase';
+import { updateAnalytics, getVisitorCount } from '../services/firebase';
 import TextTransition, { presets } from "react-text-transition";
 import CountUp from 'react-countup';
 import Card from '../components/Card';
@@ -144,19 +144,20 @@ export default function Home({ uniqueUsers }) {
 }
 
 /* TODO GET ANALYTICS */
-export async function getServerSideProps(context) {
+export async function getStaticSideProps(context) {
   /**
    * Fetches analytics data on the unique users of the site
    * 
    * @returns {object} - Props to be passed to page
    */
 
-  const cookies = context.req.headers.cookie;
-  const uniqueUsers = await updateAnalytics(cookies == undefined);
+  // const cookies = context.req.headers.cookie;
+  const uniqueUsers = await getVisitorCount();
 
   return {
     props: {
       uniqueUsers,
     },
+    revalidate: 10
   };
 }

@@ -10,17 +10,28 @@ const config = {
 initializeApp(config);
 const db = getFirestore();
 
-export async function updateAnalytics(cookies) {
+export async function getVisitorCount() {
+    const document = await getDoc(doc(db, "analytics", "visitors"));
+    return document.data().count;
+}
+
+export async function updateVisitorCount() {
+    await updateDoc(doc(db, "analytics", "visitors"), {
+        count: increment(1)
+    });
+}
+
+export async function updateAnalytics(shouldIncrement) {
     const ref = doc(db, "analytics", "visitors");
 
     const document = await getDoc(ref);
     const uniqueCount = document.data().count;
     
-    if (cookies == undefined) {
+    if (shouldIncrement) {
         updateDoc(ref, {
             count: uniqueCount + 1
-        });    
+        });
     }
 
-    return uniqueCount + 1;
+    return uniqueCount;
 }
