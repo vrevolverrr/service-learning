@@ -158,6 +158,8 @@ export async function getStaticProps() {
   // const cookies = context.req.headers.cookie;
   const uniqueUsers = await getVisitorCount();
 
+  console.log(uniqueUsers);
+
   return {
     props: {
       uniqueUsers

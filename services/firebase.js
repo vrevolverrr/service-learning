@@ -12,7 +12,9 @@ const db = getFirestore();
 
 export async function getVisitorCount() {
     const document = await getDoc(doc(db, "analytics", "visitors"));
-    return document.data().count;
+    const count = document.data().count;
+    console.log("getVisitorCount " + count.toString());
+    return count;
 }
 
 export async function updateVisitorCount() {
