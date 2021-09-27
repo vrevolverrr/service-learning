@@ -17,7 +17,7 @@ export default async function main(req, res) {
         from: req.body.email,
         to: "whiterevolver35@gmail.com",
         subject: `Carbon Zero Contact Form`,
-        text: req.body.message + `\n\nBest Regards,\n${req.body.name}`,
+        text: req.body.message + `\n\nBest Regards,\n${req.body.email}\n${req.body.name}`,
     };
     
     await new Promise((resolve, reject) => {
