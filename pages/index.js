@@ -18,6 +18,7 @@ import HealthIcon from '../public/effects/lungs.png';
 import EcosystemIcon from '../public/effects/tree.png';
 import PollutionIcon from '../public/effects/rain.png';
 import Section from '../components/Section';
+import Advert from '../components/Advert';
 
 export default function Home({ uniqueUsers }) {
 
@@ -122,24 +123,9 @@ export default function Home({ uniqueUsers }) {
 
         <div style={{height: '6vh'}}/>
 
-        {/* Donation Advert Banner */}
-        <div style={{width: '100%', display: 'flex', justifyContent: 'center', padding: '5px'}}>
-          <div style={{
-            width: '95%', maxWidth: '1800px', height: '150px', padding: '0 20px 0 20px', display: 'flex', 
-            flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around',
-            backgroundColor: '#f5f5f5', borderRadius: '20px'}}>
-            <div style={{transform: 'scale(1.4)', position: 'relative', top: '-15px'}}><Image src={LeafIcon} alt="leaf icon"/></div>
-            <p style={{position: 'relative', top: '0px', textAlign: 'center', fontSize: '22px'}}>Take it a step further and plant a tree with us today.</p>
-            <Link href="/donate" passHref={true}>
-              <button style={{
-                position: 'relative', top: '22px', cursor: 'pointer',
-                width: '180px', height: '45px', fontSize: '18px', fontFamily: 'MazzardH', 
-                borderRadius: '25px', border: 'none', backgroundColor: '#ff4500', color: 'white'}}>
-                  DONATE
-              </button>
-            </Link>
-          </div>
-        </div>
+        <Advert href="/donate" buttonText="Donate">
+          Take it a step further and plant a tree with us today.
+        </Advert>
 
         <div style={{height: '8vh'}}/>
 

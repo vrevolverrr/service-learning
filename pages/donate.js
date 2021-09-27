@@ -7,9 +7,9 @@ import ScrollView from '../components/ScrollView';
 import Photosynthesis from '../public/donate/photosynthesis.gif';
 import Reforestation0 from '../public/ape/0.jpg';
 import Reforestation1 from '../public/ape/1.jpg';
-import Reforestation2 from '../public/ape/2.jpg';
 import Reforestation3 from '../public/ape/3.jpg';
 import Reforestation4 from '../public/ape/4.jpg';
+import Advert from '../components/Advert';
 
 export default function Donate() {
     const [plantingSite, setPlantingSite] = useState(false);
@@ -45,7 +45,7 @@ export default function Donate() {
                 <div style={{height: '6vh'}}/>
             </div>
 
-            <div style={{height: '10vh'}}/>
+            <div style={{height: '6vh'}}/>
 
             <Section height='4vh' title="Donation Progress" 
                 description="We hope to raise RM1000 on behalf of APE Malaysia. Every small contribution counts. 
@@ -63,7 +63,28 @@ export default function Donate() {
 
             <div style={{height: '6vh'}}/>
 
-            <Section height='2vh' title="Why Plant A Tree?" 
+            <Section title="Why Is Reforestation Important?" 
+                description="The climate crisis we are experiencing is a complex phenomenon. Human beings and their actions are the main factors fuelling this crisis. They are also the only ones who can do something about it. How?
+                As one of the most performant actions in the counteraction of the climate crisis, reforestation is a good starting point.">
+                <ScrollView>
+                    <div className={styles.slideshow_img}><Image src={Reforestation1} alt=""></Image></div>
+                    <div className={styles.slideshow_img}><Image src={Reforestation0} alt=""></Image></div>
+                    <div className={styles.slideshow_img}><Image src={Reforestation4} alt=""></Image></div>
+                    <div className={styles.slideshow_img}><Image src={Reforestation3} alt=""></Image></div>
+                </ScrollView>
+                
+                <div style={{height: '3vh'}}/>
+                
+                <p style={{fontSize: '18px'}}>Images taken from <a title="APE Malaysia website" style={{color: '#b3261b'}}
+                href="https://apemalaysia.com/tree-planting/" target="_blank" rel="noreferrer">
+                        APE Malaysia&apos;s official website
+                    </a>
+                </p>
+            </Section>
+
+            <div style={{height: '6vh'}}/>
+
+            <Section height='2vh' title="Why Plant Trees?" 
                 description="Trees are the most efficient and cost-effective technology for the offsetting of greenhouse gases.
                 By planting a tree, you support Malaysia's effort in fighting climate change.">
                 <InfoBox image={Photosynthesis}>
@@ -73,18 +94,12 @@ export default function Donate() {
                 </InfoBox>
             </Section>
 
-            <div style={{height: '6vh'}}/>
+            <Advert external={true} title={"Donate Now"}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc6tEpVx87DfyKHtW9DjeCveYwX4hCMxnBCqQ3mj7Bqx7-3xg/viewform" buttonText="Donate">
+                Each contribution can make a difference for the environment.
+            </Advert>
 
-            <Section height='2vh' title="Why Is Reforestation Important?" 
-                description="The climate crisis we are experiencing is a complex phenomenon. Human beings and their actions are the main factors fuelling this crisis. They are also the only ones who can do something about it. How?
-                As one of the most performant actions in the counteraction of the climate crisis, reforestation is a good starting point.">
-                <ScrollView>
-                    <div className={styles.slideshow_img}><Image src={Reforestation0} alt=""></Image></div>
-                    <div className={styles.slideshow_img}><Image src={Reforestation0} alt=""></Image></div>
-                    <div className={styles.slideshow_img}><Image src={Reforestation0} alt=""></Image></div>
-                    <div className={styles.slideshow_img}><Image src={Reforestation0} alt=""></Image></div>
-                </ScrollView>
-            </Section>
+            <div style={{height: '6vh'}}/>
         </main>
     );
 }

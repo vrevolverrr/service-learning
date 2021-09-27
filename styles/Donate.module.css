@@ -72,6 +72,7 @@
 
 .slideshow_img {
     width: 700px;
-    height: auto;
+    height: 450px;
     margin-right: 25px;
+    clip-path: inset(5px round 5%);
 }
