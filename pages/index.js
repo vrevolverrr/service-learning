@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { updateAnalytics, getVisitorCount } from '../services/firebase';
+import { updateAnalytics, getVisitorCount, updateVisitorCount } from '../services/firebase';
 import TextTransition, { presets } from "react-text-transition";
 import CountUp from 'react-countup';
 import Card from '../components/Card';
@@ -20,9 +20,13 @@ import Advert from '../components/Advert';
 
 export default function Home({ uniqueUsers }) {
 
-  try {
+  var updatedCount = false;
+
+  if (process.browser && document.cookie == '') {
+    updateVisitorCount();
     document.cookie = "visited=true";
-  } catch {}
+    updatedCount = true;
+  }
 
   // Scrolling Hero Text
   const HERO_TEXT1 = ["CARBON", "ENERGY", "CARBON", "CLIMATE", "ENERGY"];
@@ -44,7 +48,7 @@ export default function Home({ uniqueUsers }) {
     <main>
         {/* Landing Page Hero Section */}
         <div className={styles.hero_container}>
-          <CountUp start={0} end={uniqueUsers} duration={1.5} delay={0} separator=",">
+          <CountUp start={0} end={updatedCount ? uniqueUsers + 1 : uniqueUsers} duration={1.5} delay={0} separator=",">
             {({ countUpRef, start }) => (
               <span className={styles.counter} ref={countUpRef} />
             )}
@@ -153,8 +157,6 @@ export async function getStaticProps() {
 
   // const cookies = context.req.headers.cookie;
   const uniqueUsers = await getVisitorCount();
-
-  console.log(uniqueUsers)
 
   return {
     props: {

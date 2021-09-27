@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app"
-import { getFirestore, doc, getDoc, updateDoc } from "firebase/firestore"
+import { getFirestore, doc, getDoc, updateDoc, increment } from "firebase/firestore"
 
 const config = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY,
@@ -19,19 +19,4 @@ export async function updateVisitorCount() {
     await updateDoc(doc(db, "analytics", "visitors"), {
         count: increment(1)
     });
-}
-
-export async function updateAnalytics(shouldIncrement) {
-    const ref = doc(db, "analytics", "visitors");
-
-    const document = await getDoc(ref);
-    const uniqueCount = document.data().count;
-    
-    if (shouldIncrement) {
-        updateDoc(ref, {
-            count: uniqueCount + 1
-        });
-    }
-
-    return uniqueCount;
 }
