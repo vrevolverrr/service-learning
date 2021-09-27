@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Banner from '../components/Banner';
 import Section from '../components/Section';
 import styles from '../styles/Contact.module.css';
@@ -8,23 +8,25 @@ export default function Contact() {
     const emailRef = useRef();
     const messageRef = useRef();
 
+    const [submitState, setSubmitState] = useState(false);
+
     const onSubmit = async () => {
+        setSubmitState(true);
+
         const payload = {
             name: nameRef.current.value.trim(),
             email: emailRef.current.value.trim(),
             message: messageRef.current.value.trim(),
         }
 
-        const response = await fetch('/api/email', {
+        fetch('/api/email', {
             method: 'POST',
             headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
             },
             body: JSON.stringify(payload)
-        });
-
-        console.log(response)
+        }).then(_ => setSubmitState(false));
     }
 
     return (
@@ -50,7 +52,12 @@ export default function Contact() {
 
                     <div style={{height: '25px'}}/>
                     
-                    <div style={{textAlign: 'right'}}><button onClick={onSubmit} className={styles.contact_submit}>Submit</button></div>
+                    <div style={{display: 'flex', justifyContent: 'right'}}>
+                        <button onClick={onSubmit} disabled={submitState} 
+                        className={styles.contact_submit} style={{width: submitState ? '40px': '135px'}}>
+                            {submitState ? <div className={styles.loader} /> : <p>Submit</p>}
+                        </button>
+                    </div>
                 </div>
             </Section>
             <div style={{height: '4vh'}}/>

@@ -7,8 +7,8 @@ export default async function main(req, res) {
         port: 465,
         host: "smtp.gmail.com",
         auth: {
-            user: "bryansoongdev@gmail.com",
-            pass: "0392bsjsdev",
+            user: process.env.SMTP_EMAIL,
+            pass: process.env.SMTP_PASSWORD,
         },
         secure: true,
     });
@@ -31,5 +31,6 @@ export default async function main(req, res) {
             }
         });
     });
-    res.status(200);
+
+    res.status(200).send("OK");
 };
