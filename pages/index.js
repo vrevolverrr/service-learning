@@ -139,7 +139,6 @@ export default function Home({ uniqueUsers }) {
         </Section>
 
         <div style={{height: '3vh'}}/>
-
       </main>
   );
 }

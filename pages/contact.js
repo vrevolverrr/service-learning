@@ -1,7 +1,9 @@
 import { useRef, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 import Banner from '../components/Banner';
 import Section from '../components/Section';
 import styles from '../styles/Contact.module.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
     const nameRef = useRef();
@@ -11,12 +13,38 @@ export default function Contact() {
     const [submitState, setSubmitState] = useState(false);
 
     const onSubmit = async () => {
+        const name = nameRef.current.value.trim()
+        const email = emailRef.current.value.trim()
+        const message = messageRef.current.value.trim()
+        
+        if (name == "" || email == "" || message == "") {
+            toast.warning('Please fill in all fields!', {
+                position: "bottom-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+            });
+            return;
+        }
+
+        toast.info('Sending message. Please wait', {
+            position: "bottom-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+        });
         setSubmitState(true);
 
         const payload = {
-            name: nameRef.current.value.trim(),
-            email: emailRef.current.value.trim(),
-            message: messageRef.current.value.trim(),
+            name: name,
+            email: email,
+            message: message
         }
 
         fetch('/api/email', {
@@ -26,12 +54,24 @@ export default function Contact() {
             'Content-Type': 'application/json'
             },
             body: JSON.stringify(payload)
-        }).then(_ => setSubmitState(false));
+        }).then(_ => {
+            setSubmitState(false);
+            toast.success('Successfully sent message', {
+                position: "bottom-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+            });
+        });
     }
 
     return (
         <main className={styles.main}>
             <Banner>CONTACT US</Banner>
+            <ToastContainer />
 
             <div style={{height: '3vh'}}/>
             
