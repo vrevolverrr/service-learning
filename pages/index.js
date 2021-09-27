@@ -20,8 +20,6 @@ import Advert from '../components/Advert';
 
 export default function Home({ uniqueUsers }) {
 
-  var updatedCount = false;
-
   if (process.browser && document.cookie == '') {
     updateVisitorCount();
     document.cookie = "visited=true";
@@ -48,7 +46,7 @@ export default function Home({ uniqueUsers }) {
     <main>
         {/* Landing Page Hero Section */}
         <div className={styles.hero_container}>
-          <CountUp start={0} end={updatedCount ? uniqueUsers + 1 : uniqueUsers} duration={1.5} delay={0} separator=",">
+          <CountUp start={0} end={uniqueUsers} duration={1.5} delay={0} separator=",">
             {({ countUpRef, start }) => (
               <span className={styles.counter} ref={countUpRef} />
             )}
