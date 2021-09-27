@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { updateAnalytics, getVisitorCount, updateVisitorCount } from '../services/firebase';
+import { getVisitorCount, updateVisitorCount } from '../services/firebase';
 import TextTransition, { presets } from "react-text-transition";
 import CountUp from 'react-countup';
 import Card from '../components/Card';
@@ -162,6 +162,5 @@ export async function getStaticProps() {
     props: {
       uniqueUsers,
     },
-    revalidate: 10
   };
 }
