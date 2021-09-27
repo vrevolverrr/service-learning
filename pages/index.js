@@ -144,7 +144,7 @@ export default function Home({ uniqueUsers }) {
 }
 
 /* TODO GET ANALYTICS */
-export async function getStaticSideProps(context) {
+export async function getStaticSideProps() {
   /**
    * Fetches analytics data on the unique users of the site
    * 
@@ -153,6 +153,8 @@ export async function getStaticSideProps(context) {
 
   // const cookies = context.req.headers.cookie;
   const uniqueUsers = await getVisitorCount();
+
+  console.log(uniqueUsers)
 
   return {
     props: {
