@@ -160,7 +160,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      uniqueUsers,
+      uniqueUsers
     },
+    revalidate: 10,
   };
 }
