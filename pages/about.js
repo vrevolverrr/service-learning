@@ -38,9 +38,9 @@ export default function About() {
             </Section>
             <Section height='5vh' title="Our Team" description="Here is the team that has worked hard to bring you this service learning project in hopes of giving back to the community.">
                 <div style={{maxWidth: '70%', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly'}}>
-                    <Profile image={Bryan} name="Soong Jun Shen" role="Web Development"/>
+                    <Profile image={Bryan} name="Soong Jun Shen" role="Web Development and Design"/>
                     <Profile image={Adrian} name="Adrian Chan" role="Project Coordinator"/>
-                    <Profile image={Adam} name="Adam Soh Shi Jie" role="Publicity Manager"/>
+                    <Profile image={Adam} name="Adam Soh Shi Jie" role="Public Relations"/>
                     <Profile image={Alan} name="Lee Yue Hang" role="Public Relations"/>
                     <Profile image={Quah} name="Quah Yan Shen" role="Information Research"/>
                     <Profile image={Ethan} name="Ethan Tan Kian Choong" role="Information Research"/>
