@@ -6,16 +6,25 @@ import styles from '../styles/navbar.module.css';
 import Logo from '../public/logo_mini.svg';
 
 function NavItem(props) {
-    return (
-        <Link href={props.href} passHref={true}>
-            <p style={{padding: '10px', color: props.active ? '#ffffff' : '#003023', cursor: 'pointer'}}
-                onClick={props.onClick}>
-                {props.children}
-            </p>
-        </Link>
+    if (!props.external) 
+        return (
+            <Link href={props.href} passHref={true}>
+                <p style={{padding: '10px', color: props.active ? '#ffffff' : '#003023', cursor: 'pointer'}}
+                    onClick={props.onClick}>
+                    {props.children}
+                </p>
+            </Link>
     );
+    else
+        return (
+            <a href={props.href} target="_blank" rel="noreferrer">
+                <p style={{padding: '10px', color: props.active ? '#ffffff' : '#003023', cursor: 'pointer'}}
+                    onClick={props.onClick}>
+                    {props.children}
+                </p>
+            </a>
+        );
 }
-
 
 export default function NavigationBar() {
     const router = useRouter();
@@ -67,6 +76,9 @@ export default function NavigationBar() {
                     </NavItem>
                     <NavItem active={router.pathname == "/donate"} href="/donate" onClick={closeNavMenu}>
                         Donate
+                    </NavItem>
+                    <NavItem active={false} href="https://forms.gle/SDxtg3ikfh4DtYwo7">
+                        Survey
                     </NavItem>
                 </div> 
                 : <div />

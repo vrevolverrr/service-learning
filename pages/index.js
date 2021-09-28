@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getVisitorCount, updateVisitorCount } from '../services/firebase';
 import TextTransition, { presets } from "react-text-transition";
+import { ToastContainer, toast } from 'react-toastify';
 import CountUp from 'react-countup';
 import Card from '../components/Card';
 import InfoBox from '../components/InfoBox';
@@ -17,6 +18,7 @@ import EcosystemIcon from '../public/effects/tree.png';
 import PollutionIcon from '../public/effects/rain.png';
 import Section from '../components/Section';
 import Advert from '../components/Advert';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home({ uniqueUsers }) {
 
@@ -31,7 +33,27 @@ export default function Home({ uniqueUsers }) {
 
   const [heroIndex, setHeroIndex] = useState(0);
 
+  const showToast = (message) => {
+    toast(message, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+
   useEffect(() => {
+    setTimeout(() => {
+      showToast("Please do check out our donation page!")  
+    }, 5000);
+
+    setTimeout(() => {
+      showToast("Help us out by filling in our survey!")  
+    }, 20000);
+
     // Set interval to update hero text
     const intervalId = setInterval(() =>
       setHeroIndex(heroIndex => heroIndex + 1),
@@ -43,6 +65,7 @@ export default function Home({ uniqueUsers }) {
 
   return (
     <main>
+        <ToastContainer />
         {/* Landing Page Hero Section */}
         <div className={styles.hero_container}>
           <CountUp start={0} end={uniqueUsers} duration={1.5} delay={0} separator=",">
