@@ -28,10 +28,6 @@ body {
   font-display: swap;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 ::-webkit-scrollbar-track {
   background: #f1f1f1; 
 }
