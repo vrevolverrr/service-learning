@@ -10,6 +10,9 @@ Carbon Zero is a website built as part of our service learning project during ou
 ## Our Mission
 To raise awareness throughout the community via advocacy while providing accurate statistics and data through active research and collaboration to help the general public understand the issue.
 
+## Technical Stack
+The website was built with React along Next.JS and was deployed on Vercel.
+
 
 ## References
 Check out our Instagram page [here](https://www.instagram.com/carbon_zero_sl/).
