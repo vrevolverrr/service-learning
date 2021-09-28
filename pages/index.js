@@ -141,8 +141,8 @@ export default function Home({ uniqueUsers }) {
         <div style={{height: '6vh'}}/>
 
         <Advert external={true} title={"Donate Now"}
-            href="https://docs.google.com/forms/d/e/1FAIpQLSc6tEpVx87DfyKHtW9DjeCveYwX4hCMxnBCqQ3mj7Bqx7-3xg/viewform" buttonText="Donate">
-                Help us out by filling in this survey!
+            href="https://forms.gle/SDxtg3ikfh4DtYwo7" buttonText="View">
+                Did our website help you? Let us know by filling in this survey.
         </Advert>
 
         <div style={{height: '6vh'}}/>
