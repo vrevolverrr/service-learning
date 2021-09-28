@@ -138,7 +138,14 @@ export default function Home({ uniqueUsers }) {
           <iframe src="https://climate.nasa.gov/interactives/climate-time-machine" width='95%' height='950px'/>
         </Section>
 
-        <div style={{height: '3vh'}}/>
+        <div style={{height: '6vh'}}/>
+
+        <Advert external={true} title={"Donate Now"}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc6tEpVx87DfyKHtW9DjeCveYwX4hCMxnBCqQ3mj7Bqx7-3xg/viewform" buttonText="Donate">
+                Help us out by filling in this survey!
+        </Advert>
+
+        <div style={{height: '6vh'}}/>
       </main>
   );
 }
