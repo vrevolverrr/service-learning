@@ -48,7 +48,7 @@ export default function Donate() {
             <div style={{height: '6vh'}}/>
 
             <Section height='4vh' title="Donation Progress" 
-                description="We hope to raise RM1000 on behalf of APE Malaysia. Every small contribution counts. 
+                description="We hope to raise RM1000 for APE Malaysia. Every small contribution counts. 
                 The donation progress is updated periodically.">
                 <div style={{width: '90vw', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <div style={{width: 'fit-content', height: '15px'}}/>
