@@ -19,7 +19,7 @@ export default function Advert(props) {
                 backgroundColor: '#f0f0f0', borderRadius: '20px'}}>
                 
                 <div style={{transform: 'scale(1.4)', position: 'relative', top: '-15px'}}><Image src={LeafIcon} alt="leaf icon"/></div>
-                <p style={{position: 'relative', top: '0px', textAlign: 'center', fontSize: '22px'}}>{props.children}</p>
+                <p style={{position: 'relative', top: '0px', textAlign: 'center', fontSize: '20px'}}>{props.children}</p>
                 
                 {props.external ? 
                 <a title={props.title} href={props.href} target="_blank" rel="noreferrer">
