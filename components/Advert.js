@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import LeafIcon from '../public/leaf.svg';
-import { getStaticProps } from '../pages';
 
 export default function Advert(props) {
     const donateButton = 

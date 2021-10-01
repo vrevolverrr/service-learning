@@ -1,0 +1,47 @@
+.leaderboard {
+    width: 100%;
+    max-width: 750px;
+    height: fit-content;
+    margin: 10px;
+}
+
+.leaderboard_item {
+    width: 100%;
+    height: fit-content;
+    padding: 15px 12px 15px 12px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 4px 7px;
+}
+
+.leaderboard_name {
+    font-size: 21px;
+    font-weight: 400;
+    color: #222222;
+}
+
+.leaderboard_message {
+    font-size: 19px;
+    font-weight: 300;
+}
+
+.leaderboard_donation_tree {
+    width: 100px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: 300;
+    border-radius: 25px;
+    color: #ffffff;
+    background-color: #4bc257
+}
+
+.leaderboard_donation_amount {
+    font-size: 16px;
+    color: #3b3b3b
+}

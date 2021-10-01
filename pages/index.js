@@ -18,7 +18,6 @@ import EcosystemIcon from '../public/effects/tree.png';
 import PollutionIcon from '../public/effects/rain.png';
 import Section from '../components/Section';
 import Advert from '../components/Advert';
-import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home({ uniqueUsers }) {
 

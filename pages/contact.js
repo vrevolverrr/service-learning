@@ -3,7 +3,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import Banner from '../components/Banner';
 import Section from '../components/Section';
 import styles from '../styles/Contact.module.css';
-import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
     const nameRef = useRef();

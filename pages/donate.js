@@ -10,6 +10,7 @@ import Reforestation1 from '../public/ape/1.jpg';
 import Reforestation3 from '../public/ape/3.jpg';
 import Reforestation4 from '../public/ape/4.jpg';
 import Advert from '../components/Advert';
+import Leaderboard from '../components/Leaderboard';
 
 export default function Donate() {
     const [plantingSite, setPlantingSite] = useState(false);
@@ -93,6 +94,13 @@ export default function Donate() {
                     This makes them perfect machines for the reduction of anthropogenic emissions not only of CO2.
                 </InfoBox>
             </Section>
+
+            <Section height='2vh' title="Donations" 
+                description="Thank you for supporting us!">
+                <Leaderboard />
+            </Section>
+            
+            <div style={{height: '3vh'}}/>
 
             <Advert external={true} title={"Donate Now"}
             href="https://docs.google.com/forms/d/e/1FAIpQLSc6tEpVx87DfyKHtW9DjeCveYwX4hCMxnBCqQ3mj7Bqx7-3xg/viewform" buttonText="Donate">
