@@ -27,8 +27,9 @@ export default function Leaderboard() {
         <p style={{color: "#666666"}}>The donations are sorted based on most recent</p>
         <div style={{height: '10px'}}/>
         <div className={styles.leaderboard}>
+            <LeaderboardItem name="phang chuen" amount={5} emoji='❤️'></LeaderboardItem>
             <LeaderboardItem name="7un" amount={20} emoji='👆🏻'></LeaderboardItem>
-            <LeaderboardItem name="Stanley" amount={10} emoji='❤️'></LeaderboardItem>
+            <LeaderboardItem name="stanley" amount={10} emoji='❤️'></LeaderboardItem>
             <LeaderboardItem name="Mango" amount={10} emoji='🌳'></LeaderboardItem>
             <LeaderboardItem name="Anonymous" amount={5} emoji='✨'></LeaderboardItem>
         </div>
