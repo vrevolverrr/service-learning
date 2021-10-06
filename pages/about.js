@@ -36,7 +36,8 @@ export default function About() {
             collaboration to help the general public understand the issue.">
             
             </Section>
-            <Section height='5vh' title="Our Team" description="We are students from Methodist College Kuala Lumpur. Here is the team that has worked hard to bring you this service learning project in hopes of giving back to the community.">
+            <Section height='5vh' title="Our Team" description="We are students from Methodist College Kuala Lumpur.
+             Here is the team that has worked hard to bring you this service learning project in hopes of giving back to the community.">
                 <div style={{maxWidth: '70%', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly'}}>
                     <Profile image={Bryan} name="Soong Jun Shen" role="Web Development and Design"/>
                     <Profile image={Adrian} name="Adrian Chan" role="Project Coordinator"/>

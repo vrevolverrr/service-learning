@@ -26,11 +26,11 @@ export default function Attribution() {
                     <a href='https://nextjs.org/' style={{fontSize: '18px', margin: '10px', color: '#1a88db'}}>
                         Web Development Framework - www.nextjs.org
                     </a>
-                    <a href='https://github.com/WinterCore/react-text-transition' style={{fontSize: '18px', margin: '10px', color: '#1a88db'}}>
-                        React Library - react text transition
+                    <a href='https://github.com/fkhadra/react-toastify' style={{fontSize: '18px', margin: '10px', color: '#1a88db'}}>
+                        React Countup - For number of people reached
                     </a>
                     <a href='https://github.com/glennreyes/react-countup' style={{fontSize: '18px', margin: '10px', color: '#1a88db'}}>
-                        React Library - react countup
+                        React Countup - For number of people reached
                     </a>
                     <a href='https://github.com/WinterCore/react-text-transition' style={{fontSize: '18px', margin: '10px', color: '#1a88db'}}>
                         React Library - react text transition
