@@ -27,6 +27,7 @@ export default function Leaderboard() {
         <p style={{color: "#666666"}}>The donations are sorted based on most recent</p>
         <div style={{height: '10px'}}/>
         <div className={styles.leaderboard}>
+            <LeaderboardItem name="Ruby" amount={20} emoji='🌱'>Earth is our only home</LeaderboardItem>
             <LeaderboardItem name="Adam Soh" amount={20} emoji='✨'>Stand together for our Mother Earth!</LeaderboardItem>
             <LeaderboardItem name="Selvi" amount={20} emoji='🍂'>Save the Nature</LeaderboardItem>
             <LeaderboardItem name="Shreeess" amount={5} emoji='🍀'>Let&apos;s save mother nature!</LeaderboardItem>
