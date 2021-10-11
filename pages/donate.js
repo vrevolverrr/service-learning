@@ -58,7 +58,7 @@ export default function Donate() {
                     </div>
                     <div style={{height: '15px'}}/>
                     <p style={{fontSize: '18px', color: '#737373'}}>
-                        <span style={{fontSize: '24px', color: '#000000'}}>RM165</span> of RM1000 raised</p>
+                        <span style={{fontSize: '24px', color: '#000000'}}>RM170</span> of RM1000 raised</p>
                 </div>
             </Section>
 
