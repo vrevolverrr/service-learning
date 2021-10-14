@@ -54,11 +54,11 @@ export default function Donate() {
                 <div style={{width: '90vw', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <div style={{width: 'fit-content', height: '15px'}}/>
                     <div className={styles.donation_progress} style={{width: '100%'}}>
-                        <div className={styles.progress_bar} style={{width: '19%'}}/>
+                        <div className={styles.progress_bar} style={{width: '21%'}}/>
                     </div>
                     <div style={{height: '15px'}}/>
                     <p style={{fontSize: '18px', color: '#737373'}}>
-                        <span style={{fontSize: '24px', color: '#000000'}}>RM190</span> of RM1000 raised</p>
+                        <span style={{fontSize: '24px', color: '#000000'}}>RM210</span> of RM1000 raised</p>
                 </div>
             </Section>
 
