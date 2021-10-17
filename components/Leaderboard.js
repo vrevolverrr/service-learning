@@ -38,7 +38,7 @@ export default function Leaderboard() {
             <LeaderboardItem name="SPSoong" amount={30} emoji='❤️'>Love Earth, Love Environment, Love Us!</LeaderboardItem>
             <LeaderboardItem name="phang chuen" amount={5} emoji='❤️'></LeaderboardItem>
             <LeaderboardItem name="7un" amount={20} emoji='👆🏻'></LeaderboardItem>
-            <LeaderboardItem name="stanley" amount={10} emoji='❤️'></LeaderboardItem>
+            <LeaderboardItem name="stanley" amount={20} emoji='❤️'></LeaderboardItem>
             <LeaderboardItem name="Mango" amount={10} emoji='🌳'></LeaderboardItem>
             <LeaderboardItem name="Anonymous" amount={5} emoji='✨'></LeaderboardItem>
         </div>
