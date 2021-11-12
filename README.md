@@ -4,6 +4,8 @@
   <b><small>✨ A social initiative to raise awareness on carbon footprint and environmental care ✨</small></b>
 </p>
 
+![Screenshot](https://raw.githubusercontent.com/vrevolverrr/service-learning/main/docs/screenshot.jpg)
+
 ## About Us
 Carbon Zero is a website built as part of our service learning project during our A-Levels programme in Methodist College Kuala Lumpur. 
 
